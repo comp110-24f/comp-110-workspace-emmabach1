@@ -5,7 +5,7 @@ def guess_a_number() -> None:
     # this function will ask the user to guess the number
     # and take it as an input and print it back
     secret: int = 7
-    x = input("Guess a number.")
+    x = input("Guess a number:")
     print("Your guess was " + str(x))
     # x has to be a str in order to print!
 
