@@ -1,4 +1,4 @@
-""""""
+"""Wordle"""
 
 __author__ = "730743044"
 
@@ -10,7 +10,7 @@ def main(secret_word: str) -> None:
         print(f"=== Turn {N}/6 ===")
         guess = input_guess(len(secret_word))
         # guess has to be the length of secret_word
-        print(emojified(guess, secret_word))
+        print(emojified(guess, secret_word))  # prints emoji results of user's guess
         if guess == secret_word:
             print(f"You won in {N}/6 turns!")
             # will replace N with a number, depending on what turn it is
@@ -33,7 +33,7 @@ def contains_char(secret_word: str, char_guess: str) -> bool:
     """Sees if guess is in word"""
     assert len(char_guess) == 1  # char_guess must be 1 character
     index: int = 0
-    char_word: bool = False  # created a local variable so that the bool return
+    char_word: bool = False  # created a local variable so that the bool will return
     while index < len(secret_word):  # will iterate over the length of secret_word
         if secret_word[index] == char_guess:
             char_word = True
